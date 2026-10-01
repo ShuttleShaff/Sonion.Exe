@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> sonion.exe </title>
+</head>
+<body>
+    <h1> I am <font color = "red"> Sonion </font> and you have been comprimised :D" </h1>
+    <h2 id="countdown">10 seconds remaining</h2>
+    
+    <h3>These are your machines final moments, you have been comprimised and your data has been stolen, please step away from your computer immediately.</h3>
+
+    <script>
+        var countdown = 1;
+        var countdownElement = document.getElementById("countdown");
+
+        var countdownTimer = setInterval(function() {
+            countdownElement.textContent = countdown;
+
+            countdown--
+
+            if (countdown <0) {
+                clearInterval(countdownTimer);
+                location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");    
+            }
+        }, 1000)
+
+    </script>
+
+    <div> 
+        <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Click here to see the coolest place ever!</button>
+    </div>
+</body>
+</html>
+    
