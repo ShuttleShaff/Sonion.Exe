@@ -46,12 +46,14 @@
                 clearInterval(countdownInterval);
                 countdownElement.textContent = "Time is up!";
                 
-                // 1. Show the hidden video container
+                // 1. Reveal your video frame container
                 document.getElementById("video-container").style.display = "block";
                 
-                // 2. Inject the correct embed URL with autoplay parameters
-                // Note: 'mute=1' is required because the user didn't click anything yet!
-                document.getElementById("rick-video").src = "https://youtube.com";
+                // 2. Inject the correct EMBED URL with autoplay AND mute turned on
+                document.getElementById("rick-video").src = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
+}, 1000);
+
             }
         }, 1000);
     </script>
