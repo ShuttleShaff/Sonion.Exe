@@ -4,33 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> sonion.exe </title>
+    <style>
+        /* Hide the video area until the countdown hits 0 */
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1> I am <font color = "red"> Sonion </font> and you have been comprimised :D" </h1>
     <h2 id="countdown">10 seconds remaining</h2>
-    
+
     <h3>These are your machines final moments, you have been comprimised and your data has been stolen, please step away from your computer immediately.</h3>
 
-    <script>
-        var countdown = 1;
-        var countdownElement = document.getElementById("countdown");
-
-        var countdownTimer = setInterval(function() {
-            countdownElement.textContent = countdown;
-
-            countdown--
-
-            if (countdown <0) {
-                clearInterval(countdownTimer);
-                location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");    
-            }
-        }, 1000)
-
-    </script>
-
-    <div> 
-        <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Click here to see the coolest place ever!</button>
+    <!-- The video container stays hidden by default -->
+    <div id="video-container"> 
+        <iframe 
+            id="rick-video"
+            width="560" 
+            height="315" 
+            src="" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
     </div>
+
+    <script>
+        var countdown = 10;
+        var countdownElement = document.getElementById("countdown");
+        
+        var countdownInterval = setInterval(function() {
+            countdown--;
+            
+            if (countdown >= 0) {
+                countdownElement.textContent = countdown + " seconds remaining";
+            }
+            
+            if (countdown < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.textContent = "Time is up!";
+                
+                // 1. Show the hidden video container
+                document.getElementById("video-container").style.display = "block";
+                
+                // 2. Inject the correct embed URL with autoplay parameters
+                // Note: 'mute=1' is required because the user didn't click anything yet!
+                document.getElementById("rick-video").src = "https://youtube.com";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
-    
