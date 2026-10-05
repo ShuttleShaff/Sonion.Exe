@@ -4,58 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> sonion.exe </title>
-    <style>
-        /* Hide the video area until the countdown hits 0 */
-        #video-container {
-            display: none;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <h1> I am <font color = "red"> Sonion </font> and you have been comprimised :D" </h1>
-    <h2 id="countdown">10 seconds remaining</h2>
+    <p>
+        One particular book which is recommended reading is <u>The Street Lawyer</u> by
+        <u>John Grisham</u>. This book is about a lawyer who begins re-evaluating his priorities in
+        life when a bad incident occurs within his law firm. Consequently, he becomes acquainted
+        with the inner city streets, and realizes the harsh existence of the homeless, and vows to give
+        them a chance in the courts. <u>The Street Lawyer</u> is a <b><i>great </i></b>book. It is
+        <b><i>well written</i></b> and <b><i>interesting</i></b>. Other books by <u>John
+        Grisham</u> include <u>The Firm</u>, <u>The Pelican Brief</u>, and <u>The Client</u>.
+    </p>
+    -- look at this im coding wowowww 
 
-    <h3>These are your machines final moments, you have been comprimised and your data has been stolen, please step away from your computer immediately.</h3>
+    <div>
+        <font color = "red">
 
-    <!-- The video container stays hidden by default -->
-    <div id="video-container"> 
-        <iframe 
-            id="rick-video"
-            width="560" 
-            height="315" 
-            src="" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-        </iframe>
+        <h1>J</h1> -- juice :)
+        <h2>u</h2>
+        <h3>s</h3>
+        <h4>t</h4>
+        <h5>i</h5>
+        <h6>n</h6>
+
+        </font>
+
+        <button>Click me!</button>
+        
     </div>
 
-    <script>
-        var countdown = 10;
-        var countdownElement = document.getElementById("countdown");
-        
-        var countdownInterval = setInterval(function() {
-            countdown--;
-            
-            if (countdown >= 0) {
-                countdownElement.textContent = countdown + " seconds remaining";
-            }
-            
-            if (countdown < 0) {
-                clearInterval(countdownInterval);
-                countdownElement.textContent = "Time is up!";
-                
-                // 1. Reveal your video frame container
-                document.getElementById("video-container").style.display = "block";
-                
-                // 2. Inject the correct EMBED URL with autoplay AND mute turned on
-                document.getElementById("rick-video").src = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    }
-}, 1000);
-
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
